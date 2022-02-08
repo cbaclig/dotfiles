@@ -3,6 +3,6 @@
 # Hard-coded for now...
 export DOTFILE_DIR=~/dotfiles
 
-for file in $DOTFILE_DIR/{docker,git}; do
-	[ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
+source $DOTFILE_DIR/docker/.docker-aliases.bash
+source $DOTFILE_DIR/git/.git-completion.bash
+source $DOTFILE_DIR/git/.git-prompt.sh
