@@ -2,11 +2,11 @@
 
 DOTFILE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-SHELL_FILES=(.bashrc,.profile)
+SHELL_FILES=(.bashrc .profile)
 
 # Override any existing files
 for shell_file in $SHELL_FILES; do
-  ln -s ${DOTFILE_DIR}/${shell_file} ~/${shell_file}
+  ln -sf ${DOTFILE_DIR}/${shell_file} ~/${shell_file}
 done;
 
 # Don't override these if they already exist
