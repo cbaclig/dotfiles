@@ -6,7 +6,7 @@ SHELL_FILES=(.bashrc,.profile)
 
 # Override any existing files
 for shell_file in $SHELL_FILES; do
-  sed -i "s/__DOTFILE_DIR_PLACEHOLDER__/${DOTFILE_DIR}/" $shell_file && ln -s ${DOTFILE_DIR}/${shell_file} ~/${shell_file}
+  ln -s ${DOTFILE_DIR}/${shell_file} ~/${shell_file}
 done;
 
 # Don't override these if they already exist
